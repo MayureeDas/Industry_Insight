@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Clone Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo"><img src="logo.png"></a>
+
+            <div class="search-box">
+                <img src="search.png">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="#" class="active-link"><img src="home.png"> <span>Home</span></a></li>
+                <li><a href="#"><img src="network.png"> <span>My Network</span></a></li>
+                <li><a href="#"><img src="jobs.png"> <span>Jobs</span></a></li>
+                <li><a href="#"><img src="message.png"> <span>Messaging</span></a></li>
+                <li><a href="#"><img src="notification.png"> <span>Notifications</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+               <img src="Me.jpg" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+        <!-------------profile-drop-down-menu---------------->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="Me.jpg">
+                    <div>
+                        <h3>Mayuree Das</h3><br>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="setting.png">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="display.png">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+
+
+
+
+    </nav>
+    <!----navbar closed---->
+
+    <div class="container">
+        <div class="left-sidebar">
+           <div class="sidebar-profile-box">
+                <img src="cover.jpg" width="100%">
+                <div class="sidebar-profile-info">
+                    <img src="Me.jpg">
+                    <h1>Mayuree Das</h1>
+                    <h3>Frontend Developer | Campus Ambassador in Viral Fission | Hustler of Skillenza (2021) | Campus Ambassador of DSC-WoW (2020)</h3>
+                    <ul>
+                        <li>Your profile views<span>100</span></li>
+                        <li>Your post views<span>780</span></li>
+                        <li>Connections<span>1106</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href="#"><img src="items.png">My items</a>
+                    <a href="#"><img src="premium.png">Try Premium</a>
+                </div>
+           </div>  
+             <div class="sidebar-activity" id="sidebarActivity">
+                <h3>RECENT</h3> 
+                <a href="#"><img src="recent.png">Frontend Developer</a>
+                <a href="#"><img src="recent.png">Artificial Intelligence</a>
+                <a href="#"><img src="recent.png">Machine learning</a>
+                <a href="#"><img src="recent.png">Arcade Prize Counter</a>
+                <a href="#"><img src="recent.png">Java Developers Community</a>
+                <h3>GROUPS</h3>
+                <a href="#"><img src="group.png">Web Design Group</a>
+                <a href="#"><img src="group.png">html & CSS Learners</a>
+                <a href="#"><img src="group.png">python & JS Group</a>
+                <a href="#"><img src="group.png">learn Coding Online</a>
+                <h3>HASHTAG</h3>
+                <a href="#"><img src="hashtag.png">webdevelopment</a>
+                <a href="#"><img src="hashtag.png">userinterface</a>
+                <a href="#"><img src="hashtag.png">onlinelearning</a>
+                <div class="discover-more-link">
+                    <a href="#">Discover more</a>
+                </div>
+               
+             </div>
+             <p id="showMoreLink" onclick="toggleActivity()">Show more <b>+</b></p>
+        </div>
+       
+
+        <!----main-content------>
+        <div class="main-content">
+             
+
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="Me.jpg">
+                    <textarea rows="2" placeholder="Write a post"></textarea>
+                </div>
+                <div class="create-post-links">
+                    <li><img src="photo.png">Photo</li>
+                    <li><img src="video.png">Video</li>
+                    <li><img src="event.png">Event</li>
+                    <li>Post</li>
+                </div>
+            </div>
+
+            <div class="sort-by">
+                <hr>
+                <p>Sort by: <span>top <img src="down-arrow.png"</span></p>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="user1.png">
+                    <div>
+                        <h1>Ryan Roslansky</h1>
+                        <small>CEO at LinkedIn</small>
+                        <small>2d &middot;</small>
+                    </div>
+                </div>
+                <p>It was an honor to sit down with my next guest on The Path, Chair of Save the Children International, Angela Ahrendts.
+
+                    At first glance, it might be hard to make sense of Angela’s career path. From her earlier jobs in women’s fashion, to CEO of Burberry, then a surprising move to tech as SVP of Retail at Apple, you have to wonder why she chose that meandering route. But when you hear her talk, it’s clear that her passion and need to love whatever she did always took the lead.
+                    
+                    She made a pact with herself at a young age that she wasn’t going to just have a job. She was going to make sure she did what she loved, and she’s never faltered from that commitment to herself. Even at the jobs she didn’t really want, she worked hard and learned everything she could. She said each job was a warmup for the one that came next. 
+                    
+                    If a job feels like a dead end, look for the opportunities to gain knowledge or learn a new skill that you can take elsewhere. Don’t let the moments be wasted in your career journey.<p>You won’t want to miss the rest of Angela’s inspiring story. To keep up with these conversations and hear of my guests’ compelling stories, subscribe to my newsletter at <span style="color:blue">https://lnkd.in/dyuH2W2N</span></p>
+
+                    
+                
+                    </p>
+                    <img src="post1.png" width="100%">
+
+                    <div class="post-stats">
+                        <div>
+                            <img src="likes.svg">
+                            <img src="love.png">
+                            <img src="clap.png">
+                            <span class="liked-users">1,942</span>
+                        </div>
+                        <div>
+                            <span>99 comments &middot; 80 reposts</span>
+                        </div>
+                    </div>
+                    <div class="post-activity">
+                        <div>
+                            <img src="Me.jpg" class="post-activity-user-icon">
+                            <img src="down-arrow.png" class="post-activity-arrow-icon">
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="like.png">
+                            <span>Like</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="comment.png">
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="send.png">
+                            <span>Send</span>
+                        </div>
+                    </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="user2.png">
+                    <div>
+                        <h1>Thomas Kurian</h1>
+                        <small>CEO at Google Cloud</small>
+                        <small>2d &middot;</small>
+                    </div>
+                </div>
+                <p>Today the "G" in <span style="color:blue">#LifeAtGoogle</span> stands for GLAM! Check out these fashionable Dooglers for <span style="color:blue">#NationalDressUpPetDay!</span>
+                    </p>
+                    <img src="post2.png" width="100%">
+
+                    <div class="post-stats">
+                        <div>
+                            <img src="likes.svg">
+                            <img src="love.png">
+                            <img src="clap.png">
+                            <span class="liked-users">19,792</span>
+                        </div>
+                        <div>
+                            <span>280 comments &middot; 292 reposts</span>
+                        </div>
+                    </div>
+                    <div class="post-activity">
+                        <div>
+                            <img src="Me.jpg" class="post-activity-user-icon">
+                            <img src="down-arrow.png" class="post-activity-arrow-icon">
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="like.png">
+                            <span>Like</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="comment.png">
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="send.png">
+                            <span>Send</span>
+                        </div>
+                    </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="user3.png">
+                    <div>
+                        <h1>Andy Jassy</h1>
+                        <small>President and CEO at Amazon</small>
+                        <small>5d &middot;</small>
+                    </div>
+                </div>
+                <p>Tragic news out of Turkey and the surrounding region. We’re activating Amazon’s logistics and delivery network to quickly get donated relief items such as blankets, tents, heaters, food, diapers, baby food & medicine to those in need.
+                    </p>
+                    <img src="post3.png" width="100%">
+
+                    <div class="post-stats">
+                        <div>
+                            <img src="likes.svg">
+                            <img src="love.png">
+                            <img src="clap.png">
+                            <span class="liked-users">12,805</span>
+                        </div>
+                        <div>
+                            <span>256 comments &middot; 836 reposts</span>
+                        </div>
+                    </div>
+                    <div class="post-activity">
+                        <div>
+                            <img src="Me.jpg" class="post-activity-user-icon">
+                            <img src="down-arrow.png" class="post-activity-arrow-icon">
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="like.png">
+                            <span>Like</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="comment.png">
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="send.png">
+                            <span>Send</span>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="user4.png">
+                    <div>
+                        <h1>Jeyandran Venugopal</h1>
+                        <small>Chief Product and Technology Officer (CPTO) at Flipkart</small>
+                        <small>4d &middot;</small>
+                    </div>
+                </div>
+                <p>Just like digital transformation, having a cloud strategy is no longer an option for businesses but a necessity for continued growth. According to @IDC, by 2024, more than 40% of enterprises will use cloud computing to meet increased performance, security, and compliance requirements.
+
+                    As we saw e-commerce grow exponentially, we discovered the power of having a strong cloud strategy in enabling our journey forward. Our cloud strategy is modeled around three parameters: security, efficiency, and cost-effectiveness to organize our infrastructure in the best way possible. This ensures that we can continue to invest in innovation while also delivering the best experience to our customers with a robust digital infrastructure in place.
+                    
+                    It is essential for businesses, especially with high business volumes like ours, to understand the value that cloud computing technology can help unlock and evaluate the best model for cloud adoption to ensure continued productivity, efficiency, and growth in a secure environment.
+                    
+                    I had the opportunity to share my views on Flipkart’s journey of adopting cloud, and why cloud is imperative for businesses to create a robust digital future on #ETSpectrum 2022. Catch the full conversation here: <span style="color:blue">https://lnkd.in/gBVip_Ct</span><br>
+                    
+                    
+                    <span style="color:blue">#ETCIOSpectrum #Cloud #digitaltransformation #ecommerce</span><br>
+                    
+                    <span style="color:blue"> Kalyan Krishnamurthy|Rajneesh Kumar|Krishna Raghavan|ETCIO</span>
+                    
+                    </p>
+                    <img src="post4.png" width="100%">
+
+                    <div class="post-stats">
+                        <div>
+                            <img src="likes.svg">
+                            <img src="love.png">
+                            <img src="clap.png">
+                            <span class="liked-users">4,809</span>
+                        </div>
+                        <div>
+                            <span>371 comments &middot; 9 reposts</span>
+                        </div>
+                    </div>
+                    <div class="post-activity">
+                        <div>
+                            <img src="Me.jpg" class="post-activity-user-icon">
+                            <img src="down-arrow.png" class="post-activity-arrow-icon">
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="like.png">
+                            <span>Like</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="comment.png">
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="send.png">
+                            <span>Send</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    
+
+
+<!----- right-sidebar------->
+
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <img src="more.png" class="info-icon">
+                <h3>Trending News</h3>
+                <a href="#">The 25 fastest-hrowing jobs in India</a>
+                <span>5d ago &middot; 25,926 readers</span>  
+
+                <a href="#">Zomato to hire 800</a>
+                <span>4d ago &middot; 19,872 readers</span>
+
+                <a href="#">Future-proof your career in 2023</a>
+                <span>4d ago &middot; 11,302 readers</span>
+
+                <a href="#">Jobs offering most remote work</a>
+                <span>3d ago &middot; 3,794 readers</span>
+
+                <a href="#">Many takers for lateral transfers</a>
+                <span>5d ago &middot; 900 readers</span>
+
+                <a href="#" class="read-more-link">Read More</a>
+            </div>
+
+            <div class="sidebar-ad">
+                <small>Ad &middot; &middot; &middot;</small>
+                <p>Mayuree, make connections that matter most in your job search</p>
+                <div>
+                    <img src="Me.jpg">
+                    <img src="linkedin_premium.jpg">
+                </div>
+                <b>See who's viewed your profile in last 90 days</b>
+                <a href="#" class="ad-link">Try for free!</a>
+            </div>
+
+            <div class="sidebar-useful-links">
+                <a href="#">About</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Advertising</a>
+                <a href="#">Get the App</a>
+                <a href="#">More</a>
+
+                <div class="copyright-msg">
+                    <img src="logo.png">
+                    <p>Linkedup &#169; 2023. All right reserved</p>
+                </div>
+            </div>
+
+
+        </div>        
+    </div>
+
+    <script>
+        let profileMenu = document.getElementById("profileMenu");
+        function toggleMenu(){
+            profileMenu.classList.toggle("open-menu");
+        }
+    </script>
+
+    <script>
+        let sideActivity = document.getElementById("sidebarActivity");
+        let moreLink = document.getElementById("showMoreLink");
+
+        function toggleActivity(){
+            sideActivity.classList.toggle("open-activity");
+            
+            if(sidebarActivity.classList.contains("open-activity")){
+                moreLink.innerHTML = "Show less <b>-</b>"
+            }else{
+                moreLink.innerHTML = "Show More <b>+</b>"
+            }
+        }
+    </script>
+</body>        
+</html>
